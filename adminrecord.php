@@ -224,7 +224,9 @@
 							<tr>
 								<th>
 									编号
-
+								</th>
+								<th>
+									学号
 								</th>
 								<th>
 									姓名
@@ -248,7 +250,7 @@
 							while($row = mysql_fetch_array($result))
 							{
 								
-								echo "<tr><td>".$row["profileid"]."</td><td>".$row["name"]."</td><td>".$row["class"]."</td><td>".$row["tel"]."</td><td>".$status[$row["status"]]."</td></tr>\n";
+								echo "<tr><td>".$row["profileid"]."</td><td>".$row["schoolnum"]."</td><td>".$row["name"]."</td><td>".$row["class"]."</td><td>".$row["tel"]."</td><td>".$status[$row["status"]]."</td></tr>\n";
 							}
 						?>
 						</tbody>

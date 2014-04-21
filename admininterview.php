@@ -120,10 +120,10 @@
 						echo "	<fieldset>\n";
 						echo "	<legend>面试评价</legend>\n";
 						echo "	<div class=\"control-group\">\n";
-						echo "		<label class=\"control-label\" for=\"profileid\">编号：</label>\n";
+						echo "		<label class=\"control-label\" for=\"profileid\">编号或学号：</label>\n";
 						echo "		<div class=\"controls\">\n";
 						echo "			<input type=\"text\" class=\"input-xlarge\" name =\"profileid\" id=\"profileid\" value=\"\" required />\n";
-						echo "			<p class=\"help-block\">请输入当前面试者编号。</p>\n";
+						echo "			<p class=\"help-block\">请输入当前面试者编号或学号。</p>\n";
 						echo "		</div>\n";
 						echo "	</div>\n";
 						echo "	<div class=\"form-actions\">\n";
@@ -134,7 +134,7 @@
 					}
 					else
 					{
-						$result = mysql_query("SELECT * FROM profile WHERE profileid = ".$_POST["profileid"]);
+						$result = mysql_query("SELECT * FROM profile WHERE profileid = ".$_POST["profileid"]." OR schoolnum = ".$_POST["profileid"]);
 						$row = mysql_fetch_array($result);
 						if ($row["profileid"] == "")
 						{
