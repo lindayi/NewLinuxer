@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Statti Color CSS v1.0 by Angelo Mazzilli */
+/* http://themeforest.net/user/AngeloM */
+
+
+/* Sections About */
+.section#about, .section-about i.active {
+	background: #333;
+}
+
+/* Sections Services */
+.section#services, .section-services i.active {
+	background: #333;
+}
+
+/* Sections Portfolio */
+.section#folio, .section-folio i.active, .item .item-detail {
+	background: #333;
+}
+
+/* Sections Blog */
+.section#blog, .section-blog i.active, #blog .item .item-detail {
+	background: #333;
+}
+
+/* Sections Contact */
+.section#contact, .section-contact i.active {
+	background: #333;
+}
+
+/* Main */
+body {
+	color: #999;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #FFF;
+}
+p a {
+	color: #FFF;
+}
+p a:hover {
+	color: #999;
+}
+hr {
+	border-top-color: rgba(255,255,255,0.25);
+}
+.thumbnails li:nth-child(2n+2), .flex-direction-nav a i {
+	background: rgba(255,255,255,0.025);
+}
+.filter {
+	border-top-color: rgba(255,255,255,0.25);
+	border-bottom-color: rgba(255,255,255,0.25);
+}
+.filter p a {
+	color: #999;
+}
+.filter p a:hover, .filter p a.active {
+	color: #FFF;
+}

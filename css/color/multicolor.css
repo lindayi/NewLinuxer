@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Statti Color CSS v1.0 by Angelo Mazzilli */
+/* http://themeforest.net/user/AngeloM */
+
+
+/* Sections About */
+.section#about, .section-about i.active {
+	background: #FC0;
+}
+
+/* Sections Services */
+.section#services, .section-services i.active {
+	background: #AD0;
+}
+
+/* Sections Portfolio */
+.section#folio, .section-folio i.active, .item .item-detail {
+	background: #0CC;
+}
+
+/* Sections Blog */
+.section#blog, .section-blog i.active, #blog .item .item-detail {
+	background: #669;
+}
+
+/* Sections Contact */
+.section#contact, .section-contact i.active {
+	background: #F33;
+}

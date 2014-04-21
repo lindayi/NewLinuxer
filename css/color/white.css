@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Statti Color CSS v1.0 by Angelo Mazzilli */
+/* http://themeforest.net/user/AngeloM */
+
+
+/* Sections About */
+.section#about, .section-about i.active {
+	background: #FFF;
+}
+.section-about i {
+	color: #666;
+}
+.section-about i.active {
+	color: #333;
+}
+
+/* Sections Services */
+.section#services, .section-services i.active {
+	background: #FFF;
+}
+.section-services i {
+	color: #666;
+}
+.section-services i.active {
+	color: #333;
+}
+
+/* Sections Portfolio */
+.section#folio, .section-folio i.active, .item .item-detail {
+	background: #FFF;
+}
+.section-folio i {
+	color: #666;
+}
+.section-folio i.active {
+	color: #333;
+}
+
+/* Sections Blog */
+.section#blog, .section-blog i.active, #blog .item .item-detail {
+	background: #FFF;
+}
+.section-blog i {
+	color: #666;
+}
+.section-blog i.active {
+	color: #333;
+}
+
+/* Sections Contact */
+.section#contact, .section-contact i.active {
+	background: #FFF;
+}
+.section-contact i {
+	color: #666;
+}
+.section-contact i.active {
+	color: #333;
+}
+
+/* Main */
+body {
+	color: #999;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+}
+p a {
+	color: #333;
+}
+p a:hover {
+	color: #999;
+}
+hr {
+	border-top-color: rgba(0,0,0,0.15);
+}
+.section .section-title strong {
+	color: #333;
+}
+.section .section-title p {
+	color: rgba(0,0,0,0.75);
+}
+.section .section-title i {
+	color: rgba(0,0,0,0.5);
+}
+.section:hover .section-title i {
+	color: rgba(0,0,0,0.75);
+}
+.section.section-expand .section-title i {
+	background: rgba(0,0,0,0.05);
+}
+.thumbnails li .thumbnail i {
+	color: #333;
+}
+.thumbnails li:hover .thumbnail i {
+	text-shadow: none;
+}
+.thumbnails li:nth-child(2n+2), .flex-direction-nav a i {
+	background: rgba(0,0,0,0.025);
+}
+.filter {
+	border-top-color: rgba(0,0,0,0.25);
+	border-bottom-color: rgba(0,0,0,0.25);
+}
+.filter p a {
+	color: #999;
+}
+.filter p a:hover, .filter p a.active {
+	color: #333;
+}
+.progress .bar {
+	background: #333;
+}
+.flex-direction-nav a i {
+	color: #CCC;
+}
+.flex-control-paging li a {
+	background: #F0F0F0;
+}
+.flex-control-paging li a.flex-active {
+	background: #CCC;
+}
