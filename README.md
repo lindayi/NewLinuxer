@@ -7,7 +7,9 @@ NewLinuxer
 
 1、依赖PHP、MYSQL服务
 
-2、使用前需手动修改以下文件：
+2、使用前在MYSQL中新建数据库join2014，并执行join2014.sql进行建表及初始化
+
+3、使用前需手动修改以下文件：
 
     a)conn.php 中数据库连接信息
     
