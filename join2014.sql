@@ -1,0 +1,40 @@
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+
+DROP TABLE IF EXISTS `profile`;
+CREATE TABLE IF NOT EXISTS `profile` (
+  `profileid` int(4) NOT NULL AUTO_INCREMENT,
+  `schoolnum` char(8) NOT NULL,
+  `name` char(20) NOT NULL,
+  `tel` char(20) NOT NULL,
+  `class` char(20) NOT NULL,
+  `status` int(5) NOT NULL,
+  PRIMARY KEY (`profileid`),
+  UNIQUE KEY `schoolnum` (`schoolnum`),
+  KEY `status` (`status`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000 ;
+
+DROP TABLE IF EXISTS `record`;
+CREATE TABLE IF NOT EXISTS `record` (
+  `recordid` int(11) NOT NULL AUTO_INCREMENT,
+  `profileid` int(11) NOT NULL,
+  `basic` text NOT NULL,
+  `advance` text NOT NULL,
+  `judge` text NOT NULL,
+  `grade` int(5) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `judger` char(50) NOT NULL,
+  `status` int(5) NOT NULL,
+  PRIMARY KEY (`recordid`),
+  KEY `profileid` (`profileid`,`grade`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000 ;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
