@@ -120,10 +120,10 @@
 						echo "	<fieldset>\n";
 						echo "	<legend>面试评价</legend>\n";
 						echo "	<div class=\"control-group\">\n";
-						echo "		<label class=\"control-label\" for=\"profileid\">编号或学号：</label>\n";
+						echo "		<label class=\"control-label\" for=\"profileid\">编号：</label>\n";
 						echo "		<div class=\"controls\">\n";
 						echo "			<input type=\"text\" class=\"input-xlarge\" name =\"profileid\" id=\"profileid\" value=\"\" required />\n";
-						echo "			<p class=\"help-block\">请输入当前面试者编号或学号。</p>\n";
+						echo "			<p class=\"help-block\">请输入当前面试者编号。</p>\n";
 						echo "		</div>\n";
 						echo "	</div>\n";
 						echo "	<div class=\"form-actions\">\n";
@@ -134,7 +134,7 @@
 					}
 					else
 					{
-						$result = mysql_query("SELECT * FROM profile WHERE profileid = ".$_POST["profileid"]." OR schoolnum = ".$_POST["profileid"]);
+						$result = mysql_query("SELECT * FROM profile WHERE profileid = ".$_POST["profileid"]);
 						$row = mysql_fetch_array($result);
 						if ($row["profileid"] == "")
 						{
@@ -146,7 +146,8 @@
 							<li>".$row["schoolnum"]." <span class=\"divider\">|</span></li>\n
 							<li>".$row["name"]." <span class=\"divider\">|</span></li>\n
 							<li>".$row["class"]." <span class=\"divider\">|</span></li>\n
-							<li>".$row["tel"]."	</li>\n
+							<li>".$row["tel"]." <span class=\"divider\">|</span></li>\n
+							<li> <div id=\"timediv\"></div></li>\n
 						</ul>\n
 						<div class=\"row\">\n
 							<div class=\"span5\">\n
@@ -217,6 +218,27 @@
 				</div>
 			</div>
 		</div>
+		<script language="javascript">
+			var second=0;
+			var minute=0;
+			var hour=0;
+			window.setTimeout("interval();",1000);
+			function interval()
+			{
+				second++;
+				if(second==60)
+				{
+				second=0;minute+=1;
+				}
+				if(minute==60)
+				{
+				minute=0;hour+=1;
+				}
+				var obj = document.getElementById("timediv");
+				obj.innerHTML = "面试已持续："+hour+"时"+minute+"分"+second+"秒";
+				window.setTimeout("interval();",1000);
+			}
+		</script>
 		<script src="js/jquery-1.10.0.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/site.js"></script>

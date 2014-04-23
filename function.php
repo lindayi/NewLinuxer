@@ -33,8 +33,8 @@ function checkid($username, $password)
 
     //关闭cURL资源，并且释放系统资源
     curl_close($ch);
-    if(strncmp("<script language='javascript'>alert(", $res, 36) == 0) return -1;
-    else return 0;
+    if(strncmp("<script>window.open", $res, 19) == 0) return 0;
+    else return -1;
 }
 
 ?>
